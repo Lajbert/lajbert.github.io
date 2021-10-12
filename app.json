@@ -1,6 +1,6 @@
 {
-  "name": "devlopr jekyll blog",
-  "description": "A Jekyll Theme built for Developers",
-  "repository": "https://github.com/sujaykundu777/devlopr-jekyll",
-  "keywords": ["jekyll", "blog"]
+  "name": "Lajbert's developer blog",
+  "description": "My journey of 2D game development",
+  "repository": "https://github.com/Lajbert/MonolithEngine",
+  "keywords": ["monogame", "blog", "video game", "game", "development", "2D", "C#"]
 }
