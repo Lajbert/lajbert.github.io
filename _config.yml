@@ -26,7 +26,9 @@ urls:
 
 author_logo: profile.png
 author: Lajbert
-author_bio: My name is Lajos, a software engineer who decided to chase his childhood dream of becoming a video game developer. 
+author_bio: My name is Lajos, a software engineer who decided to chase his childhood dream of becoming a video game developer. I have a long road ahead of me until I can release my first game, but the path taking me there is already very rewarding. There are many great people around the internet who spends time, energy and even money to make great tutorials, shares their Github repos and distribute knowledge, and this blog is my attempt to pay my respect to them and follow their lead of giving back to the community.
+You’ll find tips, tricks, bits and pieces of what I learned while working on my project, which is also my learning path, so if you see something on my blog that is incorrect or can be done better, please leave a comment, so we all can learn something. Currently I’m working on a simple, generic 2D engine called Monolith engine, built on MonoGame framework, but many of my ideas are generic, and can easily be translated to your favorite language or game engine. Hopefully you’ll find something useful here. 🙂
+You can find the source code of the engine with same projects in my Github repo.
 author_email: "lajbertgames@gmail.com"
 author_location: Switzerland
 author_website_url: "https://lajbert.github.io"
@@ -49,11 +51,11 @@ author_work_experiences:
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
+              - college_logo: szte.jpg
+                college_name: University of Szeged
+                college_url: https://u-szeged.hu/
+                college_degree: Computer Science BSc
+                description: Bachelor of Computer Science
                 visibility: true
 
 # Projects
@@ -87,7 +89,7 @@ flickr_username: johndoe
 hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-wakatime_username: Lajbert
+#wakatime_username: Lajbert
 
 # mailchimp embedded form url (newsletter):
 #mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
@@ -106,9 +108,9 @@ highlighter: rouge
 permalink: pretty
 
 # Choose what to show ( can be true or false)
-show_author_work_experiences: true
-show_author_education_details: true
-show_author_project_details: true
+show_author_work_experiences: false
+show_author_education_details: false
+show_author_project_details: false
 
 # pagination of posts
 paginate: 4
