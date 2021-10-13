@@ -25,4 +25,4 @@ The source code for desktop and mobile can be found in the <a href="https://gith
 
 Have fun!
 
-You can find Monolith engine <a href="https://github.com/Lajbert/MonolithEngine">on my Github repo</a>
+You can find Monolith Engine <a href="https://github.com/Lajbert/MonolithEngine">on my Github repo</a>
