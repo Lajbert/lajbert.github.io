@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "First game prototype with Monolith Engine"
-summary: "The day has arrived when I published my first ever game demo showcasing the capabilities of Monolith Engine"
+summary: "The day has arrived when I published my first ever game demo showcasing the capabilities of Monolith Engine."
 author: Lajbert
 date: '2021-04-30 18:12:23 +0530'
 category: update
