@@ -165,3 +165,137 @@ protected override void Draw(GameTime gameTime)
 Let’s run our program and inspect the result:
 
 <img src="https://lajbert.github.io/assets/img/posts/fixed_update1.gif" />
+
+Hmm… something seems off. The .gif might now show it that well, but if you run the program, you’ll notice that while the red square has butter smooth movement, the blue one, which we update in the FixedUpdate() method, isn’t so smooth. Almost as if it was running with only 30 FPS… Because it is! Well, kind of…  
+Let’s say your program is running with 120 FPS, and the fixed update is set to 30 FPS. This means that while the position of the red square is update with each frame (120 times a second), the position of blue frame is only updated at every 30 frames, meaning that all 4 frames will display the blue square on the exact same position before the FixedUpdate kicks in and updates it again!  
+But wait. So was I lying when I told you that the users will see smooth gameplay with only 30 fixed update/second in the background? Nope, I wasn’t! The solution is: **interpolation**!
+
+Remember I told you about the ALPHA variable before? This is time when we need it!  
+Let’s say we just had a FixedUpdate call which updated the blue square’s X position to 50, and next FixedUpdate (whenever it comes) will update it to 60.  
+What does it mean now? Currently, the X coordinate is 50, so the game loop will look like this:  
+FixedUpdate() //setting the X coordinate to 50  
+Draw() // drawing the blue square at X coordinate 50  
+Draw() // drawing the blue square at X coordinate 50  
+Draw() // drawing the blue square at X coordinate 50  
+Draw() // drawing the blue square at X coordinate 50  
+FixedUpdate() //setting the X coordinate to 60  
+Draw() // drawing the blue square at X coordinate 60  
+Draw() // drawing the blue square at X coordinate 60  
+Draw() // drawing the blue square at X coordinate 60  
+Draw() // drawing the blue square at X coordinate 60  
+
+Wouldn’t it be cool, if, instead of drawing the square in the same position 4 times, we would somehow calculate where it should be in the current Draw call, and draw it there? Something like this:
+
+FixedUpdate() //setting the X coordinate to 50, the previous position is 40  
+Draw() // drawing the blue square at X coordinate 42  
+Draw() // drawing the blue square at X coordinate 44  
+Draw() // drawing the blue square at X coordinate 46  
+Draw() // drawing the blue square at X coordinate 48  
+FixedUpdate() //setting the X coordinate to 60, the previous position is 50  
+Draw() // drawing the blue square at X coordinate 50  
+Draw() // drawing the blue square at X coordinate 52  
+Draw() // drawing the blue square at X coordinate 54  
+Draw() // drawing the blue square at X coordinate 58  
+FixedUpdate() //setting the X coordinate to 70, the previous position is 60  
+Draw() // drawing the blue square at X coordinate 60  
+Draw() // drawing the blue square at X coordinate 62  
+and so on…
+
+See how much smoother would this be? This where <a href="https://en.wikipedia.org/wiki/Linear_interpolation">linear interpolation</a> will help us!  
+Let’s create a third square, but for this one, we will save the previous position and interpolate between the previous and the current position using the ALPHA value I explained earlier.
+
+Let’s add a third class variable:
+
+{% highlight csharp %}
+// we are updating the third rectangle in the FixedUpdate() loop
+// but we also interpolate it's position
+Texture2D lerpObject;
+Vector2 lerpObjectPos = new Vector2(30, 170);
+Vector2 lerpObjectPrevPos = Vector2.Zero;
+private float lerpObjectSpeed = 6.6f;
+{% endhighlight %}
+
+And initialize it:
+
+{% highlight csharp %}
+protected override void LoadContent()
+{
+    _spriteBatch = new SpriteBatch(GraphicsDevice);
+ 
+    normalObject = CreateRectangle(64, Color.Red);
+    fixedUpdateObject = CreateRectangle(64, Color.Blue);
+    lerpObject = CreateRectangle(64, Color.DarkGreen);
+}
+{% endhighlight %}
+
+And now, let’s do a simple <a href="https://en.wikipedia.org/wiki/Linear_interpolation">linear interpolation</a> between the old position and the new one. Let’s modify the FixedUpdate method to store the third rectangle’s previous position and update it’s current position:
+
+{% highlight csharp %}
+private void FixedUpdate()
+{
+    if (fixedUpdateObjectPos.X < 30 || fixedUpdateObjectPos.X > 600)
+    {
+        fixedUpdateObjectSpeed *= -1;
+    }
+ 
+    fixedUpdateObjectPos.X += fixedUpdateObjectSpeed;
+ 
+    // saving the previous position of the green rectangle
+    lerpObjectPrevPos = lerpObjectPos;
+ 
+    if (lerpObjectPos.X < 30 || lerpObjectPos.X > 600)
+    {
+        lerpObjectSpeed *= -1;
+    }
+ 
+    // setting the current position of the green rectangle
+    lerpObjectPos.X += lerpObjectSpeed;
+}
+{% endhighlight %}
+
+Now, let’s modify the Draw method to interpolate between the previous position and the current one:
+
+{% highlight csharp %}
+protected override void Draw(GameTime gameTime)
+{
+    GraphicsDevice.Clear(Color.White);
+ 
+    // TODO: Add your drawing code here
+ 
+    _spriteBatch.Begin();
+    _spriteBatch.Draw(normalObject, normalObjectPos, Color.White);
+    _spriteBatch.Draw(fixedUpdateObject, fixedUpdateObjectPos, Color.White);
+ 
+    // we'll save the in-between interpolated positions in drawPosition 
+    // and draw the object there instead of it's current position
+    Vector2 drawPosition = Vector2.Lerp(lerpObjectPrevPos, lerpObjectPos, ALPHA);
+    _spriteBatch.Draw(lerpObject, drawPosition, Color.White);
+    _spriteBatch.End();
+ 
+    base.Draw(gameTime);
+}
+{% endhighlight %}
+
+Now, let’s run our program:
+
+<img src="https://lajbert.github.io/assets/img/posts/fixed_update2.gif" />
+
+It might not be that visible on the .gif, but if you run the program, you’ll see how smooth the green square is, just like the red one, although it’s position is updated only in the FixedUpdate method!
+Now you might be wondering: Why go through all this hassle when I can just update the position simply in the Update() loop? Because most of the time, moving an object in the game is much more than just simply adding to it’s X or Y coordinates: in real life, it’s the result of a bunch of expensive calculations: collisions (maybe multiple different collision types), physics updates, AI, forces, objects interacting with each other, and so on… These are pretty expensive things, which you really want do in a FixedUpdate loop and compared to them, a linear interpolation is almost free. Doing these CPU heavy updates only 30 times a second and determining the in-between positions with linear interpolation for the rest of the frames is much easier on the hardware, and for the reasons explained in the beginning of the article, is the way to go.
+
+You might still have some questions in your head: what about the collisions? If your collision check is running in the FixedUpdate, is 30 check/second good enough? What if I have a bullet that is moving fast, and this happens:
+
+<img src="https://lajbert.github.io/assets/img/posts/fixed_update3.png" />
+
+The hollow gray squares shows the past positions of the bullet, the black square is the current one, the red line is a wall. The FixedUpdate frequency was not high enough to detect this collision with the red line, because the positions are only updated 30 times/second, and the bullet is moving a lot during one cycle, going through the wall, which is bad. The obvious solution is increasing the FixedUpdate frequency. Let’s say we did it, and this is what we got:
+
+<img src="https://lajbert.github.io/assets/img/posts/fixed_update4.png" />
+
+We have increased the FixedUpdate frequency, but the bullet is moving really fast and movement is still not frequent enough to detect that collision. We could further increase the FixedUpdate frequency and it might solve the problem in the current scenario, but what happens if there is another object that moves even faster, or you have thinner collider? Increase the frequency further? Until when? Or should we calculate collisions for the in-between interpolated position? That would just defeat the purpose of the whole FixedUpdate, as we would run the collision at every frame that the computer renders and not in our FixedUpdate loop, and we would be back at where we started!  
+Is there anything we can do to detect every collision, while still running the collision checks in the FixedUpdate configured to 30 FPS, regardless of how fast an object is moving? Yes, there is a way to do it (with certain conditions), we will look at this in the <a href="ttps://lajbert.github.io">next article series</a> about movement and collision basics!
+
+If you got lost in the coding, you can download the complete project files from <a href="https://drive.google.com/file/d/1cWr2fGAV8KJpsS9VrZ8Ow5ckRxGJQUi_/view?usp=sharing">here</a>. It was tested with MonoGame 3.8.
+
+If you are interested in the implementation of the topics discussed on my blog, check out Monolith engine, my open source 2D game engine on <a href="https://github.com/Lajbert/MonolithEngine">GitHub</a>.
+
+Stay tuned!
