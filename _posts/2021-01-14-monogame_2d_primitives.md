@@ -5,7 +5,7 @@ summary: "While working on new features and prototypes, it always makes my life 
 author: lajbert
 date: '2021-01-14 18:00:23 +0530'
 category: tutorial
-#thumbnail: /assets/img/posts/code.jpg
+thumbnail: /assets/img/posts/primitive.png
 keywords: c#, csharp, monogame, 2d, game, development, video game
 permalink: /blog/monogame_2d_primitives/
 usemathjax: true
