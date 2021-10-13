@@ -16,4 +16,4 @@ As I’ve <a href="https://lajbert.github.io/blog/game_announcement/">mentioned 
 
 However, I do have a feeling that nobody besides me will ever use this engine, so I will soon post a tutorial about how to develop for PC and mobile with MonoGame, starting from scratch, from project setup to running the same codebase on both platforms.
 
-Update 2021.10.12: the source code for the platformer game for mobile and PC can be found under GameSamples\PlatformerGame on <a href="https://github.com/Lajbert/MonolithEngine">my Github repo</a>. The article about setting up the project structure for cross-platform development with MonoGame is <a href="https://lajbert.github.io">here</a>.
+Update 2021.10.12: the source code for the platformer game for mobile and PC can be found under GameSamples\PlatformerGame on <a href="https://github.com/Lajbert/MonolithEngine">my Github repo</a>. The article about setting up the project structure for cross-platform development with MonoGame is <a href="https://lajbert.github.io/blog/cross_platform_project/">here</a>.
