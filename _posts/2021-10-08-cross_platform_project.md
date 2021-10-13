@@ -306,7 +306,7 @@ Now you have the option to run the game on your phone (if you don’t see this, 
 
 Let’s test it!
 
-<img src="https://lajbert.github.io/assets/img/posts/cross_platform_project14.jpg" />
+<img src="https://lajbert.github.io/assets/img/posts/cross_platform_project14.jpeg" />
 
 And you’re done! Now you can go ahead and develop your game easily to mobile and/or other platforms! You can add platform-specific code in the engine, and/or in the game code project, the codebases are nicely separated and whenever you make a change, you can quickly test it in each platform. Just keep in mind that in the engine and in the game’s code, the macro ANDROID or __ANDROID__ will not work, because the conditional compilation symbols are not passed from one project to another, their scope is only in the project where you have defined them. However, you can have a public static bool variable in any class, which you set to true only from the Android project, and leave it on false when you are running the desktop code. This way, you can easily define different behaviors on different platforms, like using touch input for mobile and using mouse+keyboard on desktop.
 
