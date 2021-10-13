@@ -95,7 +95,7 @@ private void FixedUpdate()
 }
 {% endhighlight %}
 
-Now, we have to change the Update() method to implement the fixed update. The idea is the following (although this is explained in Glenn Fiedler’s Fix your Timestep! post): we are going to measure the elapsed time of the game in an accumulator. While accumulator is bigger than our desired fixed update delay, we are going to run one FixedUpdate and decrease the accumulator by the fixed update delay. We also keep track of our progress in the value called ALPHA, this shows how far we are in the current frame. For example, ALPHA value 0.5 means that we are halfway between the previous frame and the next upcoming frame. We will need this variable later. 
+Now, we have to change the Update() method to implement the fixed update. The idea is the following (although this is explained in Glenn Fiedler’s Fix your Timestep! post): we are going to measure the elapsed time of the game in an accumulator. While accumulator is bigger than our desired fixed update delay, we are going to run one FixedUpdate and decrease the accumulator by the fixed update delay. We also keep track of our progress in the value called ALPHA, this shows how far we are in the current frame. For example, ALPHA value 0.5 means that we are halfway between the previous frame and the next upcoming frame. We will need this variable later.  
 Here is the code:
 
 {% highlight csharp %}
@@ -165,7 +165,7 @@ protected override void Draw(GameTime gameTime)
 Let’s run our program and inspect the result:
 
 <img
-    src="assets/img/authors/fixed_update1.gif"
+    src="assets/img/posts/fixed_update1.gif"
     width="50px"
     height="50px"
 />
