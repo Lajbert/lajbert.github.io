@@ -220,6 +220,10 @@ Just like we did before, add a new project to the solution. In your Solution Exp
 
 <img src="https://lajbert.github.io/assets/img/posts/cross_platform_project9.png" />
 
+Right click on the MyDesktopGame project, Add -> Project Reference… and in the appearing window, tick MyCrossPlatformGame.
+
+<img src="https://lajbert.github.io/assets/img/posts/cross_platform_project15.png" />
+
 Delete the auto-generated Game1.cs class in the MyDesktopGame project, we won’t need it. Next, go Program.cs and change the Main function to this:
 
 {% highlight csharp %}
