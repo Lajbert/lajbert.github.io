@@ -14,11 +14,11 @@ urls:
       url: /about
     - text: Blog
       url: /blog
-    - #text: Gallery
+    #- text: Gallery
       #url: /gallery
-    - #text: Shop
+    #- text: Shop
       #url : /shop
-    - #text: Contact
+    #- text: Contact
       #url : /contact
 
 
