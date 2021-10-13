@@ -3,7 +3,7 @@ layout: post
 title:  "Monolith Engine went public!"
 summary: "My WIP open source 2D game engine is available to everyone"
 author: Lajbert
-date: '2021-04-30 18:10:23 +0530'
+date: '2021-04-30 18:14:23 +0530'
 category: update
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/mt4.gif
