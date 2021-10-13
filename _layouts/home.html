@@ -39,8 +39,13 @@ layout: full-width
                     {% assign author = post.author %}
                     {% if author %}
                      {% assign author_data = site.data.authors[author] %}
-                     <img
+                     <!--img
                       src="{{site.url}}{{site.baseurl}}/assets/img/authors/{{author_data.avatar}}"
+                      width="50px"
+                      height="50px"
+                   /-->
+                   <img
+                      src="{{site.url}}{{site.baseurl}}/assets/img/authors/profile.png"
                       width="50px"
                       height="50px"
                    />
