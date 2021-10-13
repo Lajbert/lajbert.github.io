@@ -4,7 +4,7 @@ username: Lajbert
 bio: "Enterprise Java for a living. Video game development the soul."
 site: https://lajbert.github.io
 avatar: profile.png
-email: lajbertgames@johndoe.com
+email: lajbertgames@gmail.com
 social:
     - title: "github"
       url: "https://github.com/Lajbert/MonolithEngine"
