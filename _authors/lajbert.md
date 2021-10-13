@@ -1,5 +1,5 @@
 ---
-#name: Lajos Rajna
+name: Lajos Rajna
 username: Lajbert
 bio: "Enterprise Java for a living. Video game development the soul."
 site: https://lajbert.github.io
