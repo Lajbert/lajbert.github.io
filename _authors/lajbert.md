@@ -1,7 +1,7 @@
 ---
 name: Lajos
 username: Lajbert
-bio: "Enterprise Java for a living. Video game development the soul."
+bio: "Enterprise Java for a living. Video game development for the soul."
 site: https://lajbert.github.io
 avatar: profile.png
 email: lajbertgames@gmail.com
