@@ -8,7 +8,7 @@ category: update
 #category: ['jekyll', 'guides', 'sample_category']
 thumbnail: /assets/img/posts/platformer2.gif
 keywords: c#, csharp, monogame, 2d, game, development, video game
-permalink: /blog/monolith_public/
+permalink: /blog/game_prototype/
 usemathjax: true
 ---
 
