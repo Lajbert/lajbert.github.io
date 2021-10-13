@@ -164,8 +164,4 @@ protected override void Draw(GameTime gameTime)
 
 Let’s run our program and inspect the result:
 
-<img
-    src="assets/img/posts/fixed_update1.gif"
-    width="50px"
-    height="50px"
-/>
+<img src="https://lajbert.github.io/assets/img/posts/fixed_update1.gif" />
