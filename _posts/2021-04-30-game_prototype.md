@@ -15,7 +15,7 @@ usemathjax: true
 It’s a simple platformer game demo, which demonstrates typical scenarios for a platformer game. This doesn’t utilize everything in the engine, but still gives a pretty good idea of what to use and what it can achieve in it’s current state. It’s really short, only takes like 3-5 minutes to play it through, and you can’t die just yet, after all, it’s for testing and showcase purposes, not for commercial use :) <br>
 If you’d like to try it, here is the Windows executable:
 
-You can find Monolith engine <a href="https://lajbert.itch.io/platformer-demo">https://lajbert.itch.io/platformer-demo</a>
+<a href="https://lajbert.itch.io/platformer-demo">https://lajbert.itch.io/platformer-demo</a>
 
 Android:
 PlayStore URL coming soon, you can run it yourself on your phone from the repository linked below.
