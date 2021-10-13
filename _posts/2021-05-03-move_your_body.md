@@ -11,7 +11,6 @@ keywords: c#, csharp, monogame, 2d, game, development, video game
 permalink: /blog/move_your_body/
 usemathjax: true
 ---
-<a href="https://lajbert.github.io/blog/fixed_timestep/">here</a>
 
 I made a promise in <a href="https://lajbert.github.io/blog/fixed_timestep/">my last article</a> to explain how you can have guaranteed collision detection while using fixed timesteps even with 30 FPS. This article is the first of a two part series that will deliver this promise:  
 This time we are going to move our rectangle around with a juicy, smooth movement that feels good to the player and in the next one, we will create a simple, static, grid based environmental collision system which will detect all the collisions, regardless of how fast your objects are moving.  
@@ -133,6 +132,6 @@ The .gif might not reflect this, but notice how much more natural this feels! Yo
 
 I hope you liked this short tutorial, if you had troubles following the code, you can download the complete source from <a href="https://drive.google.com/file/d/1RdGYdyJLR4CRtk4NvPeyEaD-a5WIKxmd/view?usp=sharing">here</a> created with MonoGame 3.8. We are going to build on top of this is the next tutorial about collisions.
 
-If you want more, head over to my <a href="https://lajbert.github.io">next article</a> about the collisions!
+If you want more, head over to my <a href="https://lajbert.github.io/blog/collision_detection/">next article</a> about the collisions!
 
 If you are interested in the implementation of the topics discussed on my blog, check out Monolith engine, my open source 2D game engine on <a href="https://github.com/Lajbert/MonolithEngine">GitHub</a>.
