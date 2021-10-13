@@ -2,9 +2,10 @@
 layout: post
 title:  "Drawing 2D primitivies in MonoGame"
 summary: "While working on new features and prototypes, it always makes my life much easier if I can visualize what is happening on the screen, for example: visualizing the result of a raycast or the pivot of a sprite."
-author: Lajbert
+#author: Lajbert
 date: '2021-01-14 18:00:23 +0530'
 category: tutorial
+#category: ['jekyll', 'guides', 'sample_category']
 thumbnail: /assets/img/posts/primitive.png
 keywords: c#, csharp, monogame, 2d, game, development, video game
 permalink: /blog/monogame_2d_primitives/
