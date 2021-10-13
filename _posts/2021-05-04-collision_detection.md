@@ -237,7 +237,7 @@ Notice that we can even skip validating the array indexes at this point.
 Now, this code might not be the nicest or fastest implementation there is, but it’s easy to follow for a beginner and demonstrates the idea.  
 If you try your game now, you can increase the speed of the rectangle to as high as you want, the box will never move through any of the walls:
 
-<img src="https://lajbert.github.io/assets/img/posts/collisions1.gif" />
+<img src="https://lajbert.github.io/assets/img/posts/collisions2.gif" />
 
 I’ve increased the movementSpeed to make it 100x faster than the original (from 10 to 1000, and 10 was already heavily skipping collisions); it’s actually so fast that I wasn’t even able to capture it properly. But you can increase it to as high as you want, the collisions will always be detected!  
 And the best of all: this same technique works also on dynamic collisions! You just have to add your dynamic collision check to the FixedUpdate loop where we update the object’s position, and there you go! You will do the extra dynamic collision checks for fast moving objects, but for the rest, you will have as much as your FixedUpdate is configured for!
