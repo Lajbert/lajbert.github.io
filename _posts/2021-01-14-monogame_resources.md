@@ -15,7 +15,7 @@ usemathjax: true
 
 New to game development or MonoGame? Take a look at the following pages:
 
-https://deepnight.net/ – great tips and rich Github repo of examples of a seasoned game developer  
-http://rbwhitaker.wikidot.com/start – great MonoGame tutorials  
-https://www.patreon.com/NemoKrad/posts – patreon page of Charles Humphrey, who is working on a 3D engine using MonoGame. Many of his solutions are applicable in 2D as well.  
+<a href="https://deepnight.net/">https://deepnight.net/</a> – great tips and rich Github repo of examples of a seasoned game developer  
+<a href="http://rbwhitaker.wikidot.com/start">http://rbwhitaker.wikidot.com/start/</a> – great MonoGame tutorials  
+<a href="https://www.patreon.com/NemoKrad/posts">https://www.patreon.com/NemoKrad/posts/</a> – patreon page of Charles Humphrey, who is working on a 3D engine using MonoGame. Many of his solutions are applicable in 2D as well.  
 [to be continued]
