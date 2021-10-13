@@ -37,6 +37,12 @@ And now we are are going to do some coding. If you look up any basic movement tu
 Add a new class variable to store the keyboard state:
 
 {% highlight csharp %}
+KeyboardState keyboardState;
+{% endhighlight %}
+
+…and update it in the beginning of our normal Update() method, you can just simply add the following line to the very first line there:
+
+{% highlight csharp %}
 keyboardState = Keyboard.GetState();
 {% endhighlight %}
 
