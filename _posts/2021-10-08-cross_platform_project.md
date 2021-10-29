@@ -20,14 +20,14 @@ This is approach is also very useful even if you are only targeting mobile, beca
 
 There is no superior, streamlined way to develop a game, so we are going to take a look at my approach, which means the following:
 
-1. I have a <a href="https://github.com/Lajbert/MonolithEngine">video game engine</a> that I’m using to make my game(s), this a shared code in a separate project
+1. I have a <a href="https://github.com/Lajbert/MonolithEngine">video game engine</a> that I’m using to make my game(s), this is a shared code in a separate project
 2. I have a game project, that uses the aforementioned engine code from project 1. and contains the game logic itself, a “platformless” shared project. This code can’t be ran in itself, but it can be included in the target platforms’ solutions.
 3. I have 2 separate projects targeting mobile and PC, both includes the code from project 2., but they each run the game on the respective platform.
 
 <img src="https://lajbert.github.io/assets/img/posts/cross_platform_project1.png" />
 The project landscape I’m using
 
-At this point, you might want to ask: why bother with an engine and a game code separately, why can’t I just have one source code project for the game and that’s it? This a fair question, and not every game requires an engine. In my case, I maintain this engine that encapsulates the most common functionalities that video games need (Camera, collisions, UI, etc.), but if you have a codebase specifically for the video game itself, without having engine or library, you can still follow along this tutorial by just skipping project 1 or 2. For the sake of this tutorial, we are going to use my method, the one I sketched up in the picture above.
+At this point, you might want to ask: why bother with an engine and a game code separately, why can’t I just have one source code project for the game and that’s it? This a fair question, and not every game requires an external engine, you can just code your game directly. In my case, I maintain this engine that encapsulates the most common functionalities that video games need (Camera, collisions, UI, etc.), but if you have a codebase specifically for the video game itself, without having engine or library, you can still follow along this tutorial by just skipping project 1 or 2. For the sake of this tutorial, we are going to use my method, the one I sketched up in the picture above.
 
 ### Creating the project for the engine
 
