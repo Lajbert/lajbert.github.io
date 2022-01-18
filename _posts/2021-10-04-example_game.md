@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cross-platform game exampel coming"
+title:  "Cross-platform game example coming"
 summary: "After all, Monolith Engine is cross-platform."
 author: Lajbert
 date: '2021-06-24 18:14:23 +0530'
