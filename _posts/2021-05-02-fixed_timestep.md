@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Fix your timestep - in MonoGame"
+title:  "[Archive] Fix your timestep - in MonoGame"
 summary: "Advantages and example implementation of fixed timestep in MonoGame"
 author: Lajbert
 date: '2021-05-02 18:12:23 +0530'
-category: tutorial
+category: archive
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/platformer2.gif
 keywords: c#, csharp, monogame, 2d, game, development, video game

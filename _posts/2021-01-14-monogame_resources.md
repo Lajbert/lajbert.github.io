@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Collection of game development and MonoGame resources"
+title:  "[Archive] Collection of game development and MonoGame resources"
 summary: "New to game development or MonoGame? Take a look at the following pages!"
 author: Lajbert
 date: '2021-01-14 18:10:23 +0530'
-category: tutorial
+category: archive
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/primitive.png
 keywords: c#, csharp, monogame, 2d, game, development, video game

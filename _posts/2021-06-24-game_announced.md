@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "I started working on an actual game"
+title:  "[Archive] I started working on an actual game"
 summary: "Let's put Monolith Engine to use!"
 author: Lajbert
 date: '2021-06-24 18:14:23 +0530'
-category: update
+category: archive
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/platformer2.gif
 keywords: c#, csharp, monogame, 2d, game, development, video game
