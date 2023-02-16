@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "MonoGame iOS UI freeze"
+title:  "\[Archive\]MonoGame iOS UI freeze"
 summary: "But read this even if you are not developing to iOS"
 author: Lajbert
 date: '2021-11-19 12:19:23 +0530'
-category: tutorial
+category: archive
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/platformer2.gif
 keywords: c#, csharp, monogame, 2d, game, development, video game
