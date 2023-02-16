@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Archive: MonoGame iOS UI freeze"
+title:  "[Archive] MonoGame iOS UI freeze"
 summary: "But read this even if you are not developing to iOS"
 author: Lajbert
 date: '2021-11-19 12:19:23 +0530'

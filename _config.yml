@@ -61,7 +61,7 @@ author_education_details:
 # Projects
 author_project_details:
               - project_thumbnail: monogame.png
-                project_title: Monolith Engine
+                project_title: [Arthive] Monolith Engine
                 project_description: A free, open source, cross-platform 2D game engine based on MonoGame
                 project_url: https://github.com/Lajbert/MonolithEngine
                 visibility: true
