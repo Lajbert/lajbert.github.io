@@ -28,7 +28,7 @@ author_logo: profile.png
 author: Lajbert
 author_bio: "My name is Lajos, a software engineer who decided to chase his childhood dream of becoming a video game developer. I have a long road ahead of me until I can release my first game, but the path taking me there is already very rewarding. There are many great people around the internet who spends time, energy and even money to make great tutorials, shares their Github repos and distribute knowledge, and this blog is my attempt to pay my respect to them and follow their lead of giving back to the community.  
 You’ll find tips, tricks, bits and pieces of what I learned while working on my project, which is also my learning path, so if you see something on my blog that is incorrect or can be done better, please leave a comment, so we all can learn something.   
-Considering the risks I see using MonoGame at its current state, I've decided to (at least temporarly) retire my own 2D game engine called Monolith Engine, and migrate my game onto Godot engine.
+Considering the risks I see using MonoGame at its current state, I've decided to (at least temporarly) retire my own game engine called Monolith Engine, and migrate my game onto Godot engine.
 Still, the code for Monolith Engine will stay available, many of my ideas are generic, and can easily be translated to your favorite language or game engine."
 author_email: "lajbertgames@gmail.com"
 author_location: Switzerland
@@ -38,7 +38,7 @@ typewrite-text: A collection of tutorials and personal development experiences. 
 # Projects
 author_project_details:
               - project_thumbnail: monogame.png
-                project_title: [Arthive] Monolith Engine
+                project_title: Monolith Engine (Archive)
                 project_description: A free, open source, cross-platform 2D game engine based on MonoGame
                 project_url: https://github.com/Lajbert/MonolithEngine
                 visibility: true
