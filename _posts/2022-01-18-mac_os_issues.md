@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "MonoGame issues on MacOSX"
+title:  "[Archive] MonoGame issues on MacOSX"
 summary: "Just a few things to overcome..."
 author: Lajbert
 date: '2022-01-18 10:59:23 +0530'
-category: tutorial
+category: archive
 #category: ['jekyll', 'guides', 'sample_category']
 #thumbnail: /assets/img/posts/platformer2.gif
 keywords: c#, csharp, monogame, 2d, game, development, video game
